@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Task List</title>
+<link rel="stylesheet" type="text/css" href="styles/tasks.css"
+	media="screen" />
+	<script src="scripts/jquery-2.1.3.min.js"></script>
+	<script>
+		$('[required="required"]').prev('label').append('<span>*</span>').chidren('span').addClass('required');
+		$('tbody tr:even').addClass('even');
+	</script>
+</head>
+<body>
+	<header>
+		<span><strong>Task List</strong></span>
+	</header>
+	<main>
+	<section>
+		<form>
+
+			<div>
+				<label>Task:</label> <input type="text" required="required"
+					name="task" class="large" placeholder="BreakFast at my place" />
+			</div>
+
+			<div>
+				<label>Required By:</label> <input type="date" required="required"
+					name="requiredBy" />
+			</div>
+
+			<div>
+				<label>Category:</label> <select name="cateogory">
+					<option value="Personal">Personal</option>
+					<option value="Work">Work</option>
+				</select>
+			</div>
+
+			<nav>
+				<a href="#">Save Task</a> <a href="#">Clear Task</a>
+			</nav>
+
+		</form>
+	</section>
+
+	<section>
+		<table id="tblTasks">
+			<colgroup>
+				<col width="50%">
+				<col width="25%">
+				<col width="25%">
+			</colgroup>
+
+			<!-- head -->
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Due</th>
+					<th>Category</th>
+				</tr>
+			</thead>
+
+			<!-- body -->
+			<tbody>
+				<tr>
+					<td>Return library books</td>
+					<td><time datetime="2013-10-14">2013-10-14</time></td>
+					<td>Personal</td>
+				</tr>
+				<tr>
+						<td>Perform project demo to stakeholders</td>
+						<td><time datetime="2013-10-14">2013-10-14</time></td>
+						<td>Work</td>
+					</tr>
+				<tr>
+					<td>Meet Friends for Dinner</td>
+					<td><time datetime="2013-10-14">2013-10-14</time></td>
+					<td>Personal</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<nav>
+			<a href="#">Add Task</a>
+		</nav>
+
+	</section>
+	</main>
+
+	<footer>You have 3 tasks.</footer>
+</body>
+</html>
